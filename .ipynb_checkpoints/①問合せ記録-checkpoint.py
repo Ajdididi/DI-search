@@ -65,12 +65,12 @@ if check_password():
             st.write('【日付】' + tdate)
             st.write('【種別】' + data_n[i][1])
             st.write('【医薬品名】' + data_n[i][2])
-            st.write('【質問】')
-            st.write(data_n[i][3])
-            st.write('【回答】')
-            st.write(data_n[i][4])
-            st.write('【参考文献】')
-            st.write(data_n[i][5])
+            st.write('【質問】  \n'
+                    + f'{data_n[i][3]}')
+            st.write('【回答】  \n'
+                    + f'{data_n[i][4]}')
+            st.write('【参考文献】  \n'
+                    + f'{data_n[i][5]}')
             st.write('-------------------------------------------------------------------')
         st.write('')
         st.write('-------------------------------------------------------------------')
