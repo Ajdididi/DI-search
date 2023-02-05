@@ -53,8 +53,12 @@ if check_password():
         cur.execute("SELECT * FROM T_new WHERE category LIKE ? OR drug LIKE ? OR question LIKE ? OR answer LIKE ? OR reference LIKE ?", 
                     [kensaku, kensaku, kensaku, kensaku, kensaku])
         data_n = cur.fetchall()
+        cur.close()
+        db.close()
 
-        st.write('■■■2022年1月以降の問合せ記録: {len(data_n)}件■■■')
+        st.write('-------------------------------------------------------------------')
+        st.write(f'■2022年1月以降の問合せ記録: {len(data_n)}件')
+        st.write('-------------------------------------------------------------------')
         for i in range(0, len(data_n)):
             tdatetime = datetime.strptime(data_n[i][0], '%Y-%m-%d %H:%M:%S') 
             tdate = tdatetime.date().strftime('%Y/%m/%d')
@@ -69,7 +73,9 @@ if check_password():
             st.write(data_n[i][5])
             st.write('-------------------------------------------------------------------')
         st.write('')
-        st.write('■■■2021年12月以前の問合せ記録: {len(data)}件■■■')
+        st.write('-------------------------------------------------------------------')
+        st.write(f'■2021年12月以前の問合せ記録: {len(data)}件')
+        st.write('-------------------------------------------------------------------')
         for i in range(0, len(data)):
             tdatetime = datetime.strptime(data[i][0], '%Y-%m-%d %H:%M:%S')
             tdate = tdatetime.date().strftime('%Y/%m/%d')
@@ -81,5 +87,3 @@ if check_password():
             st.write('【回答】')
             st.write(data[i][4])
             st.write('-------------------------------------------------------------------')
-        cur.close()
-        db.close()
