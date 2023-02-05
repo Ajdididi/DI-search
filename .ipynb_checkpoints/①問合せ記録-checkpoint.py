@@ -32,7 +32,7 @@ def check_password():
         return True
 
 if check_password():
-    st.title('問合せ記録 横断検索（DB変換版）')
+    st.title('問合せ記録 横断検索')
     kensaku = st.text_input('検索ワード（1単語のみ）を入力してください。  ※半角・全角は区別されます')
     btn = st.button('検索')
 
@@ -46,11 +46,11 @@ if check_password():
         db = sqlite3.connect('toiawase.db')
         cur = db.cursor()    
 
-        cur.execute("SELECT * FROM to_2021 WHERE category LIKE ? OR drug LIKE ? OR question LIKE ? OR answer LIKE ?", 
+        cur.execute("SELECT * FROM T_old WHERE category LIKE ? OR drug LIKE ? OR question LIKE ? OR answer LIKE ?", 
                     [kensaku, kensaku, kensaku, kensaku])
         data = cur.fetchall()
 
-        cur.execute("SELECT * FROM from_2022 WHERE category LIKE ? OR drug LIKE ? OR question LIKE ? OR answer LIKE ? OR reference LIKE ?", 
+        cur.execute("SELECT * FROM T_new WHERE category LIKE ? OR drug LIKE ? OR question LIKE ? OR answer LIKE ? OR reference LIKE ?", 
                     [kensaku, kensaku, kensaku, kensaku, kensaku])
         data_n = cur.fetchall()
 
