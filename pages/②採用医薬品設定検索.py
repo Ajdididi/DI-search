@@ -7,7 +7,8 @@ kensaku = st.text_input('医薬品名（商品名もしくは一般名）を入�
 btn = st.button('検索')
 if btn:
     kensaku = '%'+kensaku+'%'
-    cur.execute("SELECT * FROM T_druginfo WHERE drug LIKE ? OR general LIKE ?", [kensaku, kensaku])
+    cur.execute("SELECT * FROM T_druginfo WHERE drug LIKE ? OR general LIKE ?", 
+                [kensaku, kensaku])
     kekka = cur.fetchall()
     cur.close()
     db.close()
@@ -141,4 +142,3 @@ if btn:
                 st.write('----薬情----  \n'
                         + '設定なし')
             st.write('----------------------')
-
