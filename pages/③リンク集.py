@@ -30,7 +30,7 @@ st.write('---------------------------------')
 st.write('■ ガイドライン・学会HP')
 st.write('✓[NCCN](https://www.nccn.org/)')
 st.write('✓日本化学療法学会  \n'
-        + '・[VCM TDMソフトウェア PAT](https://www.chemotherapy.or.jp/modules/guideline/index.php?content_id=79)'
+        + '・[VCM TDMソフトウェア PAT](https://www.chemotherapy.or.jp/modules/guideline/index.php?content_id=79)  \n'
         + '・[術後感染予防抗菌薬適正使用のための実践ガイドライン（Summary）](https://www.chemotherapy.or.jp/uploads/files/guideline/jyutsugo_shiyou_jissen.pdf)'
         )
 st.write('✓日本腎臓病薬物療法学会  \n'
