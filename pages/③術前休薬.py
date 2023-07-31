@@ -4,7 +4,7 @@ from datetime import datetime
 import streamlit as st
 from PIL import Image
 
-st.title('休薬関連 検索')
+st.title('術前休薬関連 検索　★★★テストページ★★★')
 kensaku = st.text_input('検索ワード（1単語のみ）を入力してください。  ※半角・全角は区別されます')
 btn = st.button('検索')
 
@@ -48,6 +48,6 @@ if btn:
             st.write('-------------------------------------------------------------------')
     st.write('')
     
-image = Image.open('yakuzai.png')
+image = Image.open('kyuyaku_masui.png')
 
 st.image(image,use_column_width=True)
