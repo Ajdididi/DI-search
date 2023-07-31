@@ -4,7 +4,7 @@ from datetime import datetime
 import streamlit as st
 from PIL import Image
 
-st.title('術前休薬関連 検索　★★★テストページ★★★')
+st.title('術前休薬関連 検索　★★★テストページです★★★')
 kensaku = st.text_input('検索ワード（1単語のみ）を入力してください。  ※半角・全角は区別されます')
 btn = st.button('検索')
 
