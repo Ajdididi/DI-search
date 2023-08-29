@@ -13,7 +13,7 @@ st.write('✓相互作用エラー設定（Googleドライブ）  \n'
         + '・[マ行～ワ行](https://drive.google.com/drive/folders/1I6uv4SrbhDHv_Ow0Dkp4yN8bafkp07Jg?usp=drive_link)  \n'
         + '・[その他項目](https://drive.google.com/drive/folders/1K3OnACCyJKT5oGWGiEAoEuuyYwmiiPFT?usp=sharing)  \n'
         )
-st.write('✓採用薬の院内運用 <<作成中>>')
+st.write('✓[採用薬の院内運用](https://drive.google.com/drive/folders/1tSW_ZDN1Oe19cvapkGJh6ZAd1gATtK1K?usp=drive_link)')
 
 st.write('---------------------------------')
 st.write('■ 医薬品・健康食品')
