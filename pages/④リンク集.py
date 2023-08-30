@@ -21,6 +21,7 @@ st.write('✓[PMDA医療用医薬品 情報検索](https://www.pmda.go.jp/PmdaSe
 st.write('✓[PMDA医薬品・医療機器等安全性情報](https://www.pmda.go.jp/safety/info-services/drugs/calling-attention/safety-info/0043.html)')
 st.write('✓[PMDA医薬品副作用報告受付サイト](https://www.estrigw.pmda.go.jp/Iryo/Login/Index?ReturnUrl=%2fIryo)（ユーザー名・パスワードが必要)')
 st.write('✓[SAFE-DI](https://www.safe-di.jp/)（ユーザー名・パスワードが必要)')
+st.write('✓[Lexicomp](https://www.uptodate.com/drug-interactions/#di-druglist)（薬物間相互作用検索）')
 st.write('✓[「健康食品」の安全性・有効性情報](https://hfnet.nibiohn.go.jp/)')
 st.write('---------------------------------')
 st.write('■ 中毒')
