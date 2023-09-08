@@ -6,4 +6,6 @@ secrets.toml
 メモ.txt
 休薬関連早見表.xlsx
 休薬関連早見表 PFMパス有.xlsx
+休薬日数確認表2023.01加工.xlsm
 kyuyaku_db_update.py
+yakuzai_db_update.py
