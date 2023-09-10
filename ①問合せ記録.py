@@ -47,11 +47,11 @@ if check_password():
         db = sqlite3.connect('toiawase.db')
         cur = db.cursor()    
 
-        cur.execute("SELECT * FROM T_old WHERE category LIKE ? OR drug LIKE ? OR question LIKE ? OR answer LIKE ?", 
+        cur.execute("SELECT * FROM T_old WHERE category LIKE ? OR drug LIKE ? OR question LIKE ? OR answer LIKE ? ORDER BY date DESC", 
                     [kensaku, kensaku, kensaku, kensaku])
         data = cur.fetchall()
 
-        cur.execute("SELECT * FROM T_new WHERE category LIKE ? OR drug LIKE ? OR question LIKE ? OR answer LIKE ? OR reference LIKE ?", 
+        cur.execute("SELECT * FROM T_new WHERE category LIKE ? OR drug LIKE ? OR question LIKE ? OR answer LIKE ? OR reference LIKE ? ORDER BY date DESC", 
                     [kensaku, kensaku, kensaku, kensaku, kensaku])
         data_n = cur.fetchall()
         cur.close()
