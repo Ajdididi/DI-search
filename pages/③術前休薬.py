@@ -4,9 +4,9 @@ from datetime import datetime
 import streamlit as st
 from PIL import Image
 
-st.write('★★★テストページ★★★')
+st.title('★★★テストページ★★★')
 st.title('休薬関連 検索')
-st.write('★★★テストページ★★★')
+st.title('★★★テストページ★★★')
 st.write('===== データベース使用上の注意 =====')
 st.write('休薬関連情報は、休薬規約を基に作成したデータベースです。  \n'
         +'一部、参考情報として過去の対応事例を参考に出血リスクを表示しています。  \n'

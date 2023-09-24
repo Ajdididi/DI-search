@@ -2,9 +2,9 @@ import streamlit as st
 import sqlite3
 db = sqlite3.connect('chudoku.db')
 cur = db.cursor()
-st.write('★★★テストページ★★★')
+st.title('★★★テストページ★★★')
 st.title('中毒情報')
-st.write('★★★テストページ★★★')
+st.title('★★★テストページ★★★')
 kensaku = st.text_input('医薬品名（商品名、一般名もしくは分類名）を入力してください。※半角・全角は区別されます')
 btn = st.button('検索')
 if btn:
