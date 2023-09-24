@@ -22,15 +22,15 @@ if btn:
         st.write('----------------------')
 
         for i in range(0, len(data)):
-            st.write(f'[分類]：{data[i][1]}  \n'
-                    + f'[一般名]：{data[i][2]} ({data[i][3]}など)  \n'
-                    + f'[中毒量・致死量]：  \n'
-                    + f'{data[i][4]}  \n'
-                    + f'[中毒症状]：  \n'
-                    + f'{data[i][5]}  \n'
-                    + f'[体内動態]：  \n'
-                    + f'{data[i][6]} 円  \n'
-                    + f'[処置]：  \n'
+            st.write(f'[分類]：{data[i][1]}')
+            st.write(f'[一般名]：{data[i][2]} ({data[i][3]}など)')
+            st.write(f'[中毒量・致死量]：  \n'
+                    + f'{data[i][4]}')
+            st.write(f'[中毒症状]：  \n'
+                    + f'{data[i][5]}')
+            st.write(f'[体内動態]：  \n'
+                    + f'{data[i][6]}')
+            st.write(f'[処置]：  \n'
                     + f'{data[i][7]}  \n'                
                     )
             st.write('----------------------')
