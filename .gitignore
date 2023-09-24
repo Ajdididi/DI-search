@@ -1,11 +1,4 @@
-【2022.1月から】問い合わせ記録_2021改訂版.xlsx
-★個人情報削除【2021.12月まで】問い合わせ件数管理.xlsx
-toiawase_db_update.py
-db動作確認.ipynb
 secrets.toml
-メモ.txt
-休薬関連早見表.xlsx
-休薬関連早見表 PFMパス有.xlsx
-休薬日数確認表2023.01加工.xlsm
-kyuyaku_db_update.py
-yakuzai_db_update.py
+DIサイト更新.bat
+db_update/
+test/
