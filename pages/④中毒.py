@@ -1,7 +1,7 @@
 import streamlit as st
 import sqlite3
 
-st.title('中毒情報★★テストページ★★')
+st.title('中毒情報★★テスト★★')
 
 db = sqlite3.connect('chudoku.db')
 cur = db.cursor()
