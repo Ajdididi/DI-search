@@ -25,6 +25,8 @@ if btn:
                 saiyo = '採用あり'
             elif kekka[i][1] == 2:
                 saiyo = '院内製剤'
+            elif kekka[i][1] == 3:
+                saiyo = '緊急購入・患者限定'
             else:
                 saiyo = '採用なし'
             
