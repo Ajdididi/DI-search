@@ -54,8 +54,32 @@ if check_password():
         cur.execute("SELECT * FROM T_new WHERE category LIKE ? OR drug LIKE ? OR question LIKE ? OR answer LIKE ? OR reference LIKE ? ORDER BY date DESC", 
                     [kensaku, kensaku, kensaku, kensaku, kensaku])
         data_n = cur.fetchall()
+
+        cur.execute("SELECT * FROM T_new2 WHERE category LIKE ? OR drug LIKE ? OR question LIKE ? OR answer LIKE ? OR reference LIKE ? ORDER BY date DESC", 
+                    [kensaku, kensaku, kensaku, kensaku, kensaku])
+        data_n2 = cur.fetchall()
+
         cur.close()
         db.close()
+
+        if len(data_n2) == 0:
+            st.write('-------------------------------------------------------------------')
+            st.write('■2023年11月以降の問合せ記録：該当データなし')
+            st.write('-------------------------------------------------------------------')
+        else:
+            st.write(f'■2023年11月以降の問合せ記録：{len(data_n2)}')
+            st.write('-------------------------------------------------------------------')
+            for i in range(0, len(data_n2)):
+                tdatetime = datetime.strptime(data_n2[i][0], '%Y-%m-%d %H:%M:%S') 
+                tdate = tdatetime.date().strftime('%Y/%m/%d')
+                st.write('【日付】' + tdate)
+                st.write('【種別】' + data_n2[i][1])
+                st.write('【医薬品名】' + data_n2[i][2])
+                st.write(f'【質問】  \n{data_n2[i][3]}')
+                st.write(f'【回答】  \n{data_n2[i][4]}')
+                st.write(f'【参考文献】\n{data_n2[i][5]}')
+                st.write('-------------------------------------------------------------------')
+        st.write('')
 
         if len(data_n) == 0:
             st.write('-------------------------------------------------------------------')

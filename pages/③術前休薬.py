@@ -4,7 +4,7 @@ from datetime import datetime
 import streamlit as st
 from PIL import Image
 
-st.title('休薬関連 検索★★テスト★★')
+st.title('休薬関連 検索★★テストページ★★')
 
 st.write('===== データベース使用上の注意 =====')
 st.write('休薬関連情報は、休薬規約を基に作成したデータベースです。  \n'
@@ -13,16 +13,15 @@ st.write('休薬関連情報は、休薬規約を基に作成したデータベ�
         +'※このページからは情報の修正はできません。修正が必要な場合は管理担当者へ連絡してください。' 
         )
 st.write('検索条件を選択してください。')
-col = st.columns(2)
-jyutusiki = col[0].checkbox('術式')
-yakuzai = col[1].checkbox('薬剤名')
 
+sentaku=st.radio("検索条件",["術式","薬剤名"], 
+                 index=0, 
+                 horizontal=True
+                 )
 kensaku1 = st.text_input('検索用語（1単語のみ）を入力してください。  ※半角・全角は区別されます')
 btn1 = st.button('検索')
 
-
-if jyutusiki == True and yakuzai == False:
-
+if sentaku == '術式':
     if btn1:
         kensaku1 = '%' + kensaku1 + '%'
         db = sqlite3.connect('kyuyaku.db')
@@ -57,8 +56,7 @@ if jyutusiki == True and yakuzai == False:
                 st.write('-------------------------------------------------------------------')
         st.write('')
         
-elif jyutusiki == False and yakuzai == True:    
-
+elif sentaku == '薬剤名':
     if btn1:
         kensaku1 = '%' + kensaku1 + '%'
         db = sqlite3.connect('yakuzai.db')
@@ -95,17 +93,7 @@ elif jyutusiki == False and yakuzai == True:
                 st.write(f'【その他】  \n{data1[i][13]}')
                 st.write('-------------------------------------------------------------------')
         st.write('')
-            
-elif jyutusiki == True and yakuzai == True:
-    if btn1:
-        st.write('※検索条件の選択をひとつにしてください。※')
-   
-elif jyutusiki == False and yakuzai == False :
-
+          
+elif sentaku == '':
     if btn1:
         st.write('※検索条件「術式」または「薬剤名」を一つ選択してください。※')
-        
-hayamihyou = st.checkbox('早見表')
-if hayamihyou:
-    image = Image.open('yakuzai.png')
-    st.image(image,use_column_width=True)
