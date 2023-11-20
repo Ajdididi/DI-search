@@ -41,7 +41,7 @@ if sentaku == '術式':
         else:
             st.write(f'休薬関連情報：{len(data)}')
             st.write('-------------------------------------------------------------------')
-            for i in range(0, len(data)):
+            for i in range(len(data)):
                 st.write(f'【診療科】{data[i][1]}')
                 st.write(f'【術式】{data[i][2]}')
                 st.write(f'【略語】{data[i][3]}')
@@ -77,7 +77,7 @@ elif sentaku == '薬剤名':
             st.write(f'休薬関連情報：{len(data1)}')
             st.write('＊例外あり。詳細は休薬規約を参照して下さい。  \n※留意点あり。詳細は休薬規約を参照して下さい。')
             st.write('-------------------------------------------------------------------')
-            for i in range(0, len(data1)):
+            for i in range(len(data1)):
                 st.write(f'【分類】{data1[i][1]}' )
                 st.write(f'【採用】{data1[i][2]}')
                 st.write(f'【商品名】{data1[i][3]}')
