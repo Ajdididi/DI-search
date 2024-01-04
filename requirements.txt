@@ -1,6 +1,6 @@
 pandas
 requests
 bs4
-beautifulsoup4==3.2.0
+beautifulsoup4==4.11.1
 datetime
 pytz

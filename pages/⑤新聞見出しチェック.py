@@ -1,13 +1,14 @@
 import streamlit as st
+
+st.title('新聞見出しチェック ※作成中※')
+st.write('新聞各社の医療・健康のページから、見出し＋記事へのリンクを取得します。  \n'
+         + '※有料記事は閲覧できません。'
+         )
+
 from bs4 import BeautifulSoup
 import requests
 import datetime
 import pytz
-
-st.title('新聞見出しチェック')
-st.write('新聞各社の医療・健康のページから、見出し＋記事へのリンクを取得します。  \n'
-         + '※有料記事は閲覧できません。'
-         )
 
 today = datetime.datetime.now(pytz.timezone('Asia/Tokyo'))
 today = today.strftime('%Y/%m/%d %H:%M')
