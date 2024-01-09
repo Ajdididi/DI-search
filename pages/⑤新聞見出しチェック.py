@@ -5,7 +5,7 @@ st.write('新聞各社の医療・健康のページから、見出し＋記事�
          + '※有料記事は閲覧できません。'
          )
 
-from BS4 import BeautifulSoup
+from bs4 import BeautifulSoup
 import requests
 import datetime
 import pytz
