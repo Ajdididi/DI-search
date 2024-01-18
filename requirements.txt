@@ -3,3 +3,4 @@ requests
 beautifulsoup4
 datetime
 pytz
+bs4
