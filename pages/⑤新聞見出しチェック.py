@@ -58,12 +58,21 @@ def yomiuri():
                 yomiuri.append(f'・[{text}]({href})')
     return yomiuri
 
-mainichi_cb = st.checkbox('毎日新聞')
-if mainichi_cb:
-    st.write(f'{today}取得')
-    mainichi_data = mainichi()
-    for i in mainichi_data:
-        st.write(f'{i}')
+def asahi():
+    url = 'https://www.asahi.com/apital/?iref=pc_gnavi'
+    res = requests.get(url)
+    res.encoding = res.apparent_encoding
+    soup = BeautifulSoup(res.text, "html.parser")
+    art_list = soup.find_all('h4')
+    stem = 'https://www.asahi.com/'
+    asahi = []
+    for i in range(len(art_list)):
+        article = art_list[i].text.replace('\n', '')
+        url = stem + art_list[i].find('a').attrs['href']
+        asahi.append(f'・[{article}]({url})')
+    return asahi
+
+
 
 yomiuri_cb = st.checkbox('読売新聞')
 if yomiuri_cb:
@@ -71,3 +80,17 @@ if yomiuri_cb:
     yomiuri_data = yomiuri()
     for i in yomiuri_data:
         st.write(i)
+
+asahi_cb = st.checkbox('朝日新聞')
+if asahi_cb:
+    st.write(f'{today}取得')
+    asahi_data = asahi()
+    for i in asahi_data:
+        st.write(i)
+
+mainichi_cb = st.checkbox('毎日新聞')
+if mainichi_cb:
+    st.write(f'{today}取得')
+    mainichi_data = mainichi()
+    for i in mainichi_data:
+        st.write(f'{i}')
