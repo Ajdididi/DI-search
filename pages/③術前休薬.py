@@ -23,81 +23,87 @@ btn1 = st.button('検索')
 
 if sentaku == '術式':
     if btn1:
-        kensaku1 = '%' + kensaku1 + '%'
-        db = sqlite3.connect('kyuyaku.db')
-        cur = db.cursor()    
-
-        cur.execute("SELECT * FROM k_data WHERE category LIKE ? OR operation LIKE ? OR abbreviations LIKE ? OR risk1 LIKE ? OR risk2 LIKE ? OR anesthesia LIKE ? OR meal LIKE ? OR contrast LIKE ? OR others LIKE ?", 
-                    [kensaku1, kensaku1, kensaku1, kensaku1, kensaku1, kensaku1, kensaku1, kensaku1, kensaku1]
-                    )
-        data = cur.fetchall()
-        cur.close()
-        db.close()
-
-        if len(data) == 0:
-            st.write('-------------------------------------------------------------------')
-            st.write('休薬関連情報：該当データなし')
-            st.write('-------------------------------------------------------------------')
+        if kensaku1 == '':
+            st.write('何か入力してください！')
         else:
-            st.write(f'休薬関連情報：{len(data)}')
-            st.write('＊：例外あり。詳細は休薬規約を参照して下さい。  \n※：留意点あり。その他注意事項を参照して下さい。')
-            st.write('-------------------------------------------------------------------')
-            for i in range(len(data)):
-                st.write(f'【診療科】{data[i][1]}')
-                st.write(f'【術式】{data[i][2]}')
-                st.write(f'【略語】{data[i][3]}')
-                if data[i][4] == '―':
-                    st.write(f'【出血リスク(内視鏡)】{data[i][5]}')
-                else:
-                    st.write(f'【出血リスク】{data[i][4]}')
-                st.write(f'【麻酔】{data[i][6]}')
-                st.write(f'【欠食】{data[i][7]}')
-                st.write(f'【造影剤】{data[i][8]}')
-                st.write(f'【その他注意事項】{data[i][9]}')
+            kensaku1 = '%' + kensaku1 + '%'
+            db = sqlite3.connect('kyuyaku.db')
+            cur = db.cursor()    
+
+            cur.execute("SELECT * FROM k_data WHERE category LIKE ? OR operation LIKE ? OR abbreviations LIKE ? OR risk1 LIKE ? OR risk2 LIKE ? OR anesthesia LIKE ? OR meal LIKE ? OR contrast LIKE ? OR others LIKE ?", 
+                        [kensaku1, kensaku1, kensaku1, kensaku1, kensaku1, kensaku1, kensaku1, kensaku1, kensaku1]
+                        )
+            data = cur.fetchall()
+            cur.close()
+            db.close()
+
+            if len(data) == 0:
                 st.write('-------------------------------------------------------------------')
-        st.write('')
+                st.write('休薬関連情報：該当データなし')
+                st.write('-------------------------------------------------------------------')
+            else:
+                st.write(f'休薬関連情報：{len(data)}')
+                st.write('＊：例外あり。詳細は休薬規約を参照して下さい。  \n※：留意点あり。その他注意事項を参照して下さい。')
+                st.write('-------------------------------------------------------------------')
+                for i in range(len(data)):
+                    st.write(f'【診療科】{data[i][1]}')
+                    st.write(f'【術式】{data[i][2]}')
+                    st.write(f'【略語】{data[i][3]}')
+                    if data[i][4] == '―':
+                        st.write(f'【出血リスク(内視鏡)】{data[i][5]}')
+                    else:
+                        st.write(f'【出血リスク】{data[i][4]}')
+                    st.write(f'【麻酔】{data[i][6]}')
+                    st.write(f'【欠食】{data[i][7]}')
+                    st.write(f'【造影剤】{data[i][8]}')
+                    st.write(f'【その他注意事項】{data[i][9]}')
+                    st.write('-------------------------------------------------------------------')
+            st.write('')
         
 elif sentaku == '薬剤名':
     if btn1:
-        kensaku1 = '%' + kensaku1 + '%'
-        db = sqlite3.connect('yakuzai.db')
-        cur = db.cursor()    
-
-        cur.execute("SELECT * FROM y_data WHERE category LIKE ? OR name LIKE ? OR generic LIKE ? OR adupt2 LIKE ?",
-                    [kensaku1, kensaku1, kensaku1, kensaku1]
-                    )
-        data1 = cur.fetchall()
-        cur.close()
-        db.close()
-        
-        if len(data1) == 0:
-            st.write('-------------------------------------------------------------------')
-            st.write('休薬関連情報：該当データなし')
-            st.write('-------------------------------------------------------------------')
+        if kensaku1 == '':
+            st.write('何か入力してください！')
         else:
-            st.write(f'休薬関連情報：{len(data1)}')
-            st.write('＊：例外あり。詳細は休薬規約を参照して下さい。  \n※：留意点あり。その他注意事項を参照して下さい。')
-            st.write('-------------------------------------------------------------------')
-            for i in range(len(data1)):
-                if data1[i][2] == '●':
-                    saiyou = 'あり'
-                else:
-                    saiyou = 'なし'
-                st.write(f'【分類】{data1[i][1]}' )
-                st.write(f'【採用】{saiyou}')
-                st.write(f'【商品名】{data1[i][3]}')
-                st.write(f'【一般名】{data1[i][4]}')
-                st.write(f'【当院採用薬】{data1[i][5]}')
-                st.write(f'【手術および抜歯を含む侵襲的医療行為出血リスク（高）】  \n{data1[i][6]}')
-                st.write(f'【手術および抜歯を含む侵襲的医療行為出血リスク（中）】  \n{data1[i][7]}')
-                st.write(f'【手術および抜歯を含む侵襲的医療行為出血リスク（低）】  \n{data1[i][8]}')
-                st.write(f'【脊髄くも膜下麻酔、硬膜外麻酔、深部神経ブロック】  \n{data1[i][9]}')
-                st.write(f'【消化器内視鏡検査および治療出血リスク（高）】  \n{data1[i][10]}')
-                st.write(f'【消化器内視鏡検査および治療出血リスク（低）】  \n{data1[i][11]}')
-                st.write(f'【ヨード造影剤を用いた検査】  \n{data1[i][12]}')
-                st.write(f'【その他】  \n{data1[i][13]}')
+            kensaku1 = '%' + kensaku1 + '%'
+            db = sqlite3.connect('yakuzai.db')
+            cur = db.cursor()    
+
+            cur.execute("SELECT * FROM y_data WHERE category LIKE ? OR name LIKE ? OR generic LIKE ? OR adupt2 LIKE ?",
+                        [kensaku1, kensaku1, kensaku1, kensaku1]
+                        )
+            data1 = cur.fetchall()
+            cur.close()
+            db.close()
+            
+            if len(data1) == 0:
                 st.write('-------------------------------------------------------------------')
-        st.write('')
+                st.write('休薬関連情報：該当データなし')
+                st.write('-------------------------------------------------------------------')
+            else:
+                st.write(f'休薬関連情報：{len(data1)}')
+                st.write('＊：例外あり。詳細は休薬規約を参照して下さい。  \n※：留意点あり。その他注意事項を参照して下さい。')
+                st.write('-------------------------------------------------------------------')
+                for i in range(len(data1)):
+                    if data1[i][2] == '●':
+                        saiyou = 'あり'
+                    else:
+                        saiyou = 'なし'
+                    st.write(f'【分類】{data1[i][1]}' )
+                    st.write(f'【採用】{saiyou}')
+                    st.write(f'【商品名】{data1[i][3]}')
+                    st.write(f'【一般名】{data1[i][4]}')
+                    st.write(f'【当院採用薬】{data1[i][5]}')
+                    st.write(f'【手術および抜歯を含む侵襲的医療行為出血リスク（高）】  \n{data1[i][6]}')
+                    st.write(f'【手術および抜歯を含む侵襲的医療行為出血リスク（中）】  \n{data1[i][7]}')
+                    st.write(f'【手術および抜歯を含む侵襲的医療行為出血リスク（低）】  \n{data1[i][8]}')
+                    st.write(f'【脊髄くも膜下麻酔、硬膜外麻酔、深部神経ブロック】  \n{data1[i][9]}')
+                    st.write(f'【消化器内視鏡検査および治療出血リスク（高）】  \n{data1[i][10]}')
+                    st.write(f'【消化器内視鏡検査および治療出血リスク（低）】  \n{data1[i][11]}')
+                    st.write(f'【ヨード造影剤を用いた検査】  \n{data1[i][12]}')
+                    st.write(f'【その他】  \n{data1[i][13]}')
+                    st.write('-------------------------------------------------------------------')
+            st.write('')
           
 elif sentaku == '':
     if btn1:
