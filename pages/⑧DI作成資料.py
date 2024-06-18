@@ -5,7 +5,8 @@ st.write('■[添付文書改訂情報（Googleドライブ）](https://drive.go
 st.write('---------------------------------')
 st.write('■[包装変更情報（Googleドライブ）](https://drive.google.com/drive/folders/1IC6nnVKAjfh28nvKBS5NTUzg6f_XYdqo?usp=sharing)')
 st.write('---------------------------------')
-st.write('■[フォーミュラリ#38（Googleドライブ）](https://drive.google.com/drive/folders/1k8Nsp5Mo0DmlVAEqQiRaCQncAY3Uvv0w?usp=sharing)')
+st.write('■[フォーミュラリ2023（Googleドライブ）](https://drive.google.com/drive/folders/1k8Nsp5Mo0DmlVAEqQiRaCQncAY3Uvv0w?usp=sharing)')
+st.write('■[フォーミュラリ2024（Googleドライブ）](https://drive.google.com/drive/folders/1CStVrOfktl6vzSLTTPIFxU20q6C6RWX6?usp=sharing)')
 st.write('---------------------------------')
 st.write('■相互作用エラー設定（Googleドライブ）  \n'
         + '・[ア行](https://drive.google.com/drive/folders/1C6RFutk30mCumC895SY0zRCqlWVST4QC?usp=sharing)  \n'
