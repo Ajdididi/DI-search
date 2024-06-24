@@ -40,6 +40,7 @@ def mainichi():
             mainichi.append(f'・[{titles[i]}]({urls[i]})')
         else:
             mainichi.append(f'記事を取得できませんでした。{url}をご参照ください。')
+    mainichi = set(mainichi)  #リストの重複を削除
     return mainichi
 
 def yomiuri():
@@ -49,13 +50,13 @@ def yomiuri():
     soup = BeautifulSoup(res.text, "html.parser")
 
     yomiuri = []
-    h3_list = soup.select('h3')
-    for h3 in h3_list:
-        for a in h3.select('a'):
-            href = a.attrs['href']
-            text = a.string
-            if 'https://www.yomiuri.co.jp/medical' in href:
-                yomiuri.append(f'・[{text}]({href})')
+    articles = soup.find_all(class_='p-list-item__inner')
+    for i in range(len(articles)):
+      article = articles[i].find('a')
+      text = article.text
+      href = article.attrs['href']
+      yomiuri.append(f'・[{text}]({url+href})')
+    yomiuri = set(yomiuri)  #リストの重複を削除
     return yomiuri
 
 def asahi():
@@ -70,9 +71,8 @@ def asahi():
         article = art_list[i].text.replace('\n', '')
         url = stem + art_list[i].find('a').attrs['href']
         asahi.append(f'・[{article}]({url})')
+    asahi = set(asahi)  #リストの重複を削除
     return asahi
-
-
 
 yomiuri_cb = st.checkbox('読売新聞')
 if yomiuri_cb:
