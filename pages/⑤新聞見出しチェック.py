@@ -60,18 +60,18 @@ def yomiuri():
     return yomiuri
 
 def asahi():
-    url = 'https://www.asahi.com/apital/?iref=pc_gnavi'
+    url = 'https://www.asahi.com/apital/medicalnews/?iref=pc_apital_top'
     res = requests.get(url)
     res.encoding = res.apparent_encoding
     soup = BeautifulSoup(res.text, "html.parser")
-    art_list = soup.find_all('h4')
-    stem = 'https://www.asahi.com/'
+    headlines = soup.find_all(class_='List')
+    stem = 'https://www.asahi.com'
+    topics = headlines[0].find_all('a')
     asahi = []
-    for i in range(len(art_list)):
-        article = art_list[i].text.replace('\n', '')
-        url = stem + art_list[i].find('a').attrs['href']
-        asahi.append(f'・[{article}]({url})')
-    asahi = set(asahi)  #リストの重複を削除
+    for i in range(0, len(topics)):
+        title = topics[i].text
+        link = topics[i].attrs['href']
+        asahi.append(f'・[{title}]({stem + link})')
     return asahi
 
 yomiuri_cb = st.checkbox('読売新聞')
