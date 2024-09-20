@@ -26,7 +26,7 @@ st.write('---')
 submitter = st.checkbox('既読の報告')
 if submitter:
     with st.form(key='form1'):
-        adi = st.selectbox('読んだADIを選択してください', backnumber)
+        adi = st.selectbox('確認したADIを選択してください', backnumber)
         staff_id = st.number_input('職員IDを入力してください', step=1)
         btn = st.form_submit_button(label='送信')
     if btn:
