@@ -60,4 +60,13 @@ if check:
             st.write(f'■{adi}未読者')
             st.write(f'{midoku}')
     st.write('---')
+    # CSVとしてエクスポート (ANSIエンコーディング)
+    csv = df.to_csv(index=False, encoding='ansi')
+    # ダウンロードボタンの作成
+    st.download_button(
+        label="CSVファイルをダウンロード",
+        data=csv,
+        file_name='kidoku_backup.csv',
+        mime='text/csv',
+    )
 
