@@ -61,7 +61,9 @@ if check:
             st.write(f'{midoku}')
     st.write('---')
     # CSVとしてエクスポート (ANSIエンコーディング)
-    csv = df.to_csv(index=False, encoding='ansi')
+    csv = df.to_csv(index=False, 
+                    #encoding='ansi'
+                    )
     # ダウンロードボタンの作成
     st.download_button(
         label="CSVファイルをダウンロード",
