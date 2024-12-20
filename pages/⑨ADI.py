@@ -57,7 +57,7 @@ if check:
             st.write('Complete !')
         else:
             st.write('---')
-            st.write(f'■{adi}未読者')
+            st.write(f'■{adi}未読者：残り{len(midoku)}名')
             st.write(f'{midoku}')
     st.write('---')
     # CSVとしてエクスポート (ANSIエンコーディング)
