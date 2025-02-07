@@ -30,5 +30,18 @@ st.write('■初回チェック設定（Googleドライブ）  \n'
         + '・[ワ行](https://drive.google.com/drive/folders/1A70dlBVRaliC5Fq5LPlh95iO9V_4bW5L?usp=sharing)  \n'
         )
 st.write('---------------------------------')
+st.write('■電子一剤ファイル（Googleドライブ）  \n'
+        + '・[ア行](https://drive.google.com/drive/folders/1bRujjwEjJeW94RYHWvKt44WkyWakK-Kz?usp=drive_link)  \n'
+        + '・[カ行](https://drive.google.com/drive/folders/1vOdmMYvbX8k44PbEyoppq1iIGiqH9j6E?usp=drive_link)  \n'
+        + '・[サ行](https://drive.google.com/drive/folders/1P2BXEm54mp-92jG7llaQZ-U_F8EvY5kE?usp=drive_link)  \n'
+        + '・[タ行](https://drive.google.com/drive/folders/1NXhAdghSnzl7Q9j6bkNwBt0Cm9BMz3vU?usp=drive_link)  \n'
+        + '・[ナ行](https://drive.google.com/drive/folders/11Ot0tG7Ji5rZA0qYJtgjBQekM9EvZyKw?usp=drive_link)  \n'
+        + '・[ハ行](https://drive.google.com/drive/folders/1CcrZubnCRKxhhNVq8faWOu8v4gNEB3ID?usp=drive_link)  \n'
+        + '・[マ行](https://drive.google.com/drive/folders/12x2DL6Dn0bnOIVuXNdEM9VXJVq2P6g9w?usp=drive_link)  \n'
+        + '・[ヤ行](https://drive.google.com/drive/folders/1lxN26IG__gjndJZRL8ALJunn-jdC-82H?usp=drive_link)  \n'
+        + '・[ラ行](https://drive.google.com/drive/folders/1L_xuB_rXRWMkAEWP1ntzvWpaQqG2Hlqx?usp=drive_link)  \n'
+        + '・[ワ行](https://drive.google.com/drive/folders/1k9N02PDYpLCYrV3CXmCLDW79fzi5aSvk?usp=drive_link)  \n'
+        )
+st.write('---------------------------------')
 st.write('■[採用薬の院内運用](https://drive.google.com/drive/folders/1tSW_ZDN1Oe19cvapkGJh6ZAd1gATtK1K?usp=drive_link)')
 st.write('---------------------------------')
