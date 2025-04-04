@@ -13,6 +13,7 @@ st.write('✓[「健康食品」の安全性・有効性情報](https://hfnet.ni
 st.write('---------------------------------')
 st.write('■ 中毒')
 st.write('✓[中毒情報センター](https://www.j-poison-ic.jp/)（ユーザー名・パスワードが必要)')
+st.write('✓[CropLife Japan（農薬工業会）](https://www.jcpa.or.jp/labo/poisoning/download.html)（農薬中毒の症状と治療法)')
 st.write('---------------------------------')
 st.write('■ 妊婦・授乳婦')
 st.write('✓[LactMed](https://www.ncbi.nlm.nih.gov/books/NBK501922/)')
