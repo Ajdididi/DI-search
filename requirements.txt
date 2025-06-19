@@ -6,3 +6,5 @@ pytz
 bs4
 openpyxl
 altair
+gspread
+oauth2client

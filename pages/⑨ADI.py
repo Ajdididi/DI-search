@@ -1,6 +1,32 @@
 import streamlit as st
-import sqlite3
 import pandas as pd
+import gspread
+from oauth2client.service_account import ServiceAccountCredentials
+
+# Google Sheets 認証と操作関数
+def get_gsheet_client():
+    scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
+    service_account_info = st.secrets["gcp_service_account"]
+    credentials = ServiceAccountCredentials.from_json_keyfile_dict(
+                    dict(service_account_info), 
+                    scope
+                    )
+    client = gspread.authorize(credentials)
+
+    return client
+
+def append_to_sheet(adi, staff_id):
+    client = get_gsheet_client()
+    sheet = client.open('ADI既読チェック').sheet1  # スプレッドシート名と一致させる
+    sheet.append_row([adi, str(staff_id)])
+
+def read_sheet():
+    client = get_gsheet_client()
+
+    sheet = client.open('ADI既読チェック').sheet1
+    data = sheet.get_all_records()
+    return pd.DataFrame(data)
+
 
 # メンテナンス箇所（staff, backnumber）
 staff = [270312, 317098, 331813, 353019, 373966, 382841,
@@ -13,8 +39,9 @@ staff = [270312, 317098, 331813, 353019, 373966, 382841,
         728942, 728977, 728985, 728993, 743712, 743739, 743747, 743755, 743763, 747785,
         760633, 760641, 760650, 774278, 774286
         ]
-backnumber = ['ADI2025.05月号', 
-              #'ADI2025.03月号', 'ADI2025.01-02月号', '2024.12月号', '2024.11月号', '2024.10月号', '2024.08-09月号'
+backnumber = ['ADI2025.06月号', 'ADI2025.05月号', 
+              #'ADItest', 
+              #'ADI2025.03月号', 'ADI2025.01-02月号', '2024.12月号', '2024.11月号', '2024.10月号', '2024.08-09月号',
               ]
 
 st.title('ADI')
@@ -33,22 +60,15 @@ if submitter:
         staff_id = st.number_input('職員IDを入力してください', step=1)
         btn = st.form_submit_button(label='送信')
     if btn:
-        db = sqlite3.connect('kidoku_check.db')
-        cur = db.cursor()
-        cur.execute("INSERT INTO kidoku (ADI, ID) VALUES (?, ?)", (adi, staff_id))
-        db.commit()
-        cur.close()
-        db.close()
-        st.write('登録しました')
+        append_to_sheet(adi, staff_id)
+        st.success('登録しました')
 
+# 未読確認
 st.write('---')
 check = st.checkbox('未読確認')
 if check:
-    db = sqlite3.connect('kidoku_check.db')
-    # SQLクエリを使用しデータを取得
-    query = "SELECT * FROM kidoku"
-    df = pd.read_sql_query(query, db)
-    db.close()
+    df = read_sheet()
+
 
     for adi in backnumber:
         dfq = df.query(f"ADI == '{adi}'")
@@ -63,15 +83,3 @@ if check:
             st.write(f'■{adi}未読者：残り{len(midoku)}名')
             st.write(f'{midoku}')
     st.write('---')
-    # CSVとしてエクスポート (ANSIエンコーディング)
-    csv = df.to_csv(index=False, 
-                    #encoding='ansi'
-                    )
-    # ダウンロードボタンの作成
-    st.download_button(
-        label="CSVファイルをダウンロード",
-        data=csv,
-        file_name='kidoku_backup.csv',
-        mime='text/csv',
-    )
-
