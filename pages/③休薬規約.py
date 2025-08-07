@@ -86,7 +86,7 @@ elif sentaku == '薬剤名':
             else:
                 st.write(f'休薬関連情報：{len(data1)}')
                 st.write('＊：例外あり。詳細は休薬規約を参照して下さい。  \n※：留意点あり。その他注意事項を参照して下さい。')
-                st.write('消化器内視鏡検査および治療&nbsp;→&nbsp;**大腸**：高リスク&nbsp;&nbsp;**胃**：低リスク')
+                st.write('消化器内視鏡検査および治療&nbsp;→&nbsp;**大腸**：高リスク&nbsp;&nbsp;&nbsp;&nbsp;**胃**：低リスク')
                 st.write('-------------------------------------------------------------------')
                 for i in range(len(data1)):
                     if data1[i][2] == '●':
