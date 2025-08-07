@@ -4,7 +4,7 @@ from datetime import datetime
 import streamlit as st
 from PIL import Image
 
-st.title('休薬関連 検索★★テスト★★')
+st.title('休薬関連 検索')
 
 st.write('===== データベース使用上の注意 =====')
 st.write('休薬関連情報は、休薬規約を基に作成したデータベースです。  \n'
@@ -31,8 +31,8 @@ if sentaku == '術式':
             db = sqlite3.connect('kyuyaku.db')
             cur = db.cursor()    
 
-            cur.execute("SELECT * FROM k_data WHERE category LIKE ? OR operation LIKE ? OR abbreviations LIKE ? OR risk1 LIKE ? OR risk2 LIKE ? OR anesthesia LIKE ? OR meal LIKE ? OR contrast LIKE ? OR others LIKE ?", 
-                        [kensaku1, kensaku1, kensaku1, kensaku1, kensaku1, kensaku1, kensaku1, kensaku1, kensaku1]
+            cur.execute("SELECT * FROM k_data WHERE category LIKE ? OR operation LIKE ? OR abbreviations LIKE ? OR risk1 LIKE ? OR risk2 LIKE ? OR anesthesia LIKE ? OR meal LIKE ? OR mealoffstart LIKE ? OR mealrestart LIKE ? OR contrast LIKE ? OR others LIKE ?", 
+                        [kensaku1, kensaku1, kensaku1, kensaku1, kensaku1, kensaku1, kensaku1, kensaku1, kensaku1, kensaku1, kensaku1]
                         )
             data = cur.fetchall()
             cur.close()
@@ -56,8 +56,10 @@ if sentaku == '術式':
                         st.write(f'【出血リスク】{data[i][4]}')
                     st.write(f'【麻酔】{data[i][6]}')
                     st.write(f'【欠食】{data[i][7]}')
-                    st.write(f'【造影剤】{data[i][8]}')
-                    st.write(f'【その他注意事項】{data[i][9]}')
+                    st.write(f'【欠食開始】{data[i][8]}')
+                    st.write(f'【食事再開】{data[i][9]}')
+                    st.write(f'【造影剤】{data[i][10]}')
+                    st.write(f'【その他注意事項】{data[i][11]}')
                     st.write('-------------------------------------------------------------------')
             st.write('')
         
@@ -84,6 +86,7 @@ elif sentaku == '薬剤名':
             else:
                 st.write(f'休薬関連情報：{len(data1)}')
                 st.write('＊：例外あり。詳細は休薬規約を参照して下さい。  \n※：留意点あり。その他注意事項を参照して下さい。')
+                st.write('消化器内視鏡検査および治療&nbsp;→&nbsp;**大腸**：高リスク&nbsp;&nbsp;**胃**：低リスク')
                 st.write('-------------------------------------------------------------------')
                 for i in range(len(data1)):
                     if data1[i][2] == '●':
