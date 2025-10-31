@@ -1,11 +1,12 @@
 import streamlit as st
 
 st.title('システム更新関連資料')
-st.write('▸ 部署ごとに更新関連の資料をまとめています。')
+st.write('')
+st.write('★部署ごとにシステム更新関連の資料をまとめています。')
 st.write('---')
 st.subheader('課題・共有が必要な案件')
 st.write('')
-st.write('★[管理表](https://docs.google.com/spreadsheets/d/1vJEZKh5XMy3nx8e-mm2NeshnA0hRLKJ3/edit?usp=drive_link&ouid=108857823619003694357&rtpof=true&sd=true) ←気付いたことをご記入ください')
+st.write('▸[管理表](https://docs.google.com/spreadsheets/d/1vJEZKh5XMy3nx8e-mm2NeshnA0hRLKJ3/edit?usp=drive_link&ouid=108857823619003694357&rtpof=true&sd=true) ←気付いたことをご記入ください')
 st.write('---')
 st.subheader('10/31～11/4の運用')
 st.write('・[ｼｽﾃﾑ更新直前ｽｹｼﾞｭｰﾙと説明会開催について](https://drive.google.com/file/d/1UgT3FbXVo3uoC-XwGo_lpPE-s7ydsROZ/view?usp=drive_link)  \n'
