@@ -41,6 +41,7 @@ st.write('・[ｼｽﾃﾑ更新に伴う調剤室関連の主な変更点](http
 st.subheader('注射')
 st.write('・[新電子ｶﾙﾃでの注射運用について](https://drive.google.com/file/d/1-p8lR-1Af7_SDn4GYjvDiSXJuwn-c_ue/view?usp=drive_link)  \n'
          + '・[注射運用変更と請求方法の説明について](https://drive.google.com/file/d/1qM9EGc6nr-73rm56XofNmYCUGkB9DZ6B/view?usp=drive_link)  \n'
+         + '・[血液製剤代替医薬品のオーダ変更について](https://drive.google.com/file/d/13jaa6G8GPftUwIdGoa4rjZiBtZ-YLhn8/view?usp=drive_link)  \n' 
          + '・[ｶﾘｳﾑ製剤・注射ｼｽﾃﾑの変更点など](https://drive.google.com/file/d/1ts53DeEEJgPXKK16-qe4zEsEUvtSjqGE/view?usp=drive_link)  \n'
          + '・[新生児ｾﾝﾀｰ部門ｼｽﾃﾑについて](https://drive.google.com/file/d/1PCfnI4k6txvQkraobkD2xYYMjn9dgHdZ/view?usp=drive_link)  \n'
          + ''
