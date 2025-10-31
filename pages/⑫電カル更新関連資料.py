@@ -21,7 +21,6 @@ st.write('・[電子ｶﾙﾃ更新時に関する供給室からのお知らせ
          + '・[ｼｽﾃﾑ更新における救急外来停止時の運用について](https://drive.google.com/file/d/1XVsZjfl6C14aHUln5U5oFgGaS2LZqK_S/view?usp=drive_link)  \n'
          + '・[新ｶﾙﾃの台帳について](https://drive.google.com/file/d/1WaqpQXxJ43ivczhrZS5l8brUgUHefhC5/view?usp=drive_link)  \n'
          + '・[ｼｽﾃﾑ更新に伴う電話帳の運用について](https://drive.google.com/file/d/1gfCLnImukJCp_1KnOYEYX_fzysVSD6tL/view?usp=drive_link)  \n'
-         + '・[ｼｽﾃﾑ更新以降の内線電話番号の検索方法](https://drive.google.com/file/d/1TPboKWKnay4ifF6Hd5WQU9MGw7Fo9_ZP/view?usp=drive_link)  \n'
          + '・[ｱﾚﾙｷﾞｰに関連する周知事項](https://drive.google.com/file/d/1k4rqAUey6Wr72ijLCx4RD6G5Xih9C7Cm/view?usp=drive_link)  \n'
          + '・[患者ﾌﾟﾛﾌｧｲﾙのｱﾚﾙｷﾞｰ・注意事項について](https://drive.google.com/file/d/1fyoymVkBjdkA4yE7HfowGEEyCO42Tmnv/view?usp=drive_link)  \n'
          )
