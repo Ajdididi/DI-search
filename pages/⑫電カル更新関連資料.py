@@ -4,7 +4,7 @@ st.title('システム更新関連資料')
 st.write('▸ 部署ごとに更新関連の資料をまとめています。')
 st.write('---')
 st.subheader('課題・共有が必要な案件')
-st.write('・[管理表](https://docs.google.com/spreadsheets/d/1vJEZKh5XMy3nx8e-mm2NeshnA0hRLKJ3/edit?usp=drive_link&ouid=108857823619003694357&rtpof=true&sd=true)')
+st.write('・[管理表](https://docs.google.com/spreadsheets/d/1vJEZKh5XMy3nx8e-mm2NeshnA0hRLKJ3/edit?usp=drive_link&ouid=108857823619003694357&rtpof=true&sd=true) 気付いたことをご記入ください')
 st.write('---')
 st.subheader('10/31～11/4の運用')
 st.write('・[ｼｽﾃﾑ更新直前ｽｹｼﾞｭｰﾙと説明会開催について](https://drive.google.com/file/d/1UgT3FbXVo3uoC-XwGo_lpPE-s7ydsROZ/view?usp=drive_link)  \n'
@@ -14,6 +14,7 @@ st.write('・[ｼｽﾃﾑ更新直前ｽｹｼﾞｭｰﾙと説明会開催に
          + '・[ｼｽﾃﾑ更新時の注射調剤実施の流れ](https://drive.google.com/file/d/1IbXcAMtTlEWlRXO_7lZSP5H4rrhX-_0T/view?usp=drive_link)  \n'
          + '・[端末展開ｽｹｼﾞｭｰﾙ](https://drive.google.com/file/d/1QUj7V1aZVSWlcQVykSij5PSsx9aTleNi/view?usp=drive_link)  \n'
          + '・[ｼｽﾃﾑ更新に伴う麻薬処方せんの取扱いについて](https://drive.google.com/file/d/14cZDNQgRAJpeY4UxfmeuaTdY1w89rNHZ/view?usp=drive_link)  \n'
+         + ''
          )
 st.write('---')
 st.subheader('全体')
@@ -23,6 +24,7 @@ st.write('・[電子ｶﾙﾃ更新時に関する供給室からのお知らせ
          + '・[ｼｽﾃﾑ更新に伴う電話帳の運用について](https://drive.google.com/file/d/1gfCLnImukJCp_1KnOYEYX_fzysVSD6tL/view?usp=drive_link)  \n'
          + '・[ｱﾚﾙｷﾞｰに関連する周知事項](https://drive.google.com/file/d/1k4rqAUey6Wr72ijLCx4RD6G5Xih9C7Cm/view?usp=drive_link)  \n'
          + '・[患者ﾌﾟﾛﾌｧｲﾙのｱﾚﾙｷﾞｰ・注意事項について](https://drive.google.com/file/d/1fyoymVkBjdkA4yE7HfowGEEyCO42Tmnv/view?usp=drive_link)  \n'
+         + ''
          )
 st.subheader('調剤')
 st.write('・[ｼｽﾃﾑ更新に伴う調剤室関連の主な変更点](https://drive.google.com/file/d/1aJFQR9NCsPMPvatIZxQYwwV7pFbcd_0E/view?usp=drive_link)  \n'
@@ -32,17 +34,20 @@ st.write('・[ｼｽﾃﾑ更新に伴う調剤室関連の主な変更点](http
          + '・[搬送管理ｼｽﾃﾑの導入について](https://drive.google.com/file/d/1wsnfg8RCNipXMnZ9EnbmfIfnLHtNdMv9/view?usp=drive_link)  \n'
          + '・[麻薬管理支援ｼｽﾃﾑの更新・電子ｶﾙﾃ更新後の手術麻薬払い出しについて](https://drive.google.com/file/d/1DTN5TQWpAGhrispc7peaLMlreePxALCc/view?usp=drive_link)  \n'
          + '・[案内表示ﾓﾆﾀｰを用いた患者周知について](https://drive.google.com/file/d/1yt430xngK-HrnAdX53ww5abg3iWmquXk/view?usp=drive_link)  \n'
+         + ''
          )
 st.subheader('注射')
 st.write('・[新電子ｶﾙﾃでの注射運用について](https://drive.google.com/file/d/1-p8lR-1Af7_SDn4GYjvDiSXJuwn-c_ue/view?usp=drive_link)  \n'
          + '・[注射運用変更と請求方法の説明について](https://drive.google.com/file/d/1qM9EGc6nr-73rm56XofNmYCUGkB9DZ6B/view?usp=drive_link)  \n'
          + '・[ｶﾘｳﾑ製剤・注射ｼｽﾃﾑの変更点など](https://drive.google.com/file/d/1ts53DeEEJgPXKK16-qe4zEsEUvtSjqGE/view?usp=drive_link)  \n'
          + '・[新生児ｾﾝﾀｰ部門ｼｽﾃﾑについて](https://drive.google.com/file/d/1PCfnI4k6txvQkraobkD2xYYMjn9dgHdZ/view?usp=drive_link)  \n'
+         + ''
          )
 st.subheader('化療')
 st.write('・[ﾚｼﾞﾒﾝﾂｰﾙの仕様と新電子ｶﾙﾃへのﾚｼﾞﾒﾝ登録内容について](https://drive.google.com/file/d/1B-WFGOEyrwX2T-2wnGQN6kNeTFh9JfOY/view?usp=drive_link)  \n'
          + '・[化療早出業務の運用変更点](https://drive.google.com/file/d/1f9SS5k9-Vil8nReDyE8forB2JhvssSR1/view?usp=drive_link)  \n'
          + '・[指示出し業務の運用変更点](https://drive.google.com/file/d/16y-5IYYwfh79J--7sTnpvJfrM7oknYPi/view?usp=drive_link)  \n'
+         + ''
          )
 st.subheader('病棟')
 st.write('・[新電子ｶﾙﾃでの指示簿指示・実施の運用](https://drive.google.com/file/d/17AZVXODs1dh9uHm4Vc9zR3btY5XLk8h-/view?usp=drive_link)  \n'
@@ -51,6 +56,7 @@ st.write('・[新電子ｶﾙﾃでの指示簿指示・実施の運用](https:/
          + '・[ｲﾝｽﾘﾝの指示画面（医師の操作）](https://drive.google.com/file/d/1Llz8elHsDGFYo2P31-p4js-MUxA-MEUk/view?usp=drive_link)  \n'
          + '・[ｲﾝｽﾘﾝの実施画面（看護師の操作）](https://drive.google.com/file/d/1ZvPBU51lFBe-VYmoWxc9qN1WPokdHQU6/view?usp=drive_link)  \n'
          + '・[更新後の病棟業務日誌・薬剤管理指導担当患者一覧](https://drive.google.com/file/d/1zxQq81Qa-yI2EUY0qk5aZ5Dtl9JI4E4Q/view?usp=drive_link)  \n'
+         + ''
          )
 st.subheader('DI')
 st.write('・PFM関連[11/4以降のPFM面談について]()  \n'
