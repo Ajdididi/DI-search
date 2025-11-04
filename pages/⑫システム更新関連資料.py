@@ -20,7 +20,7 @@ st.write('・[ｼｽﾃﾑ更新直前ｽｹｼﾞｭｰﾙと説明会開催に
          )
 st.write('---')
 st.subheader('全体')
-st.write('・[電子ｶﾙﾃ更新時に関する供給室からのお知らせ]()  \n'
+st.write('・[電子ｶﾙﾃ更新時に関する供給室からのお知らせ](https://drive.google.com/file/d/1L6xsokt59mEemD1uXnPdKycUvIvBG_l6/view?usp=drive_link)  \n'
          + '・[ｼｽﾃﾑ更新における救急外来停止時の運用について](https://drive.google.com/file/d/1XVsZjfl6C14aHUln5U5oFgGaS2LZqK_S/view?usp=drive_link)  \n'
          + '・[新ｶﾙﾃの台帳について](https://drive.google.com/file/d/1WaqpQXxJ43ivczhrZS5l8brUgUHefhC5/view?usp=drive_link)  \n'
          + '・[ｼｽﾃﾑ更新に伴う電話帳の運用について](https://drive.google.com/file/d/1gfCLnImukJCp_1KnOYEYX_fzysVSD6tL/view?usp=drive_link)  \n'
@@ -62,6 +62,6 @@ st.write('・[新電子ｶﾙﾃでの指示簿指示・実施の運用](https:/
          + ''
          )
 st.subheader('DI')
-st.write('・PFM関連[11/4以降のPFM面談について]()  \n'
-         + '・PFM関連[PFMﾀﾌﾞﾚｯﾄ関連]()  \n'
+st.write('・PFM関連[11/4以降のPFM面談について](https://drive.google.com/file/d/1GhUfAEWHnBaMuSs_lxLs0yLLTL9q8w5e/view?usp=drive_link)  \n'
+         + '・PFM関連[PFMﾀﾌﾞﾚｯﾄ関連](https://drive.google.com/file/d/1Ni9mCIB_pJTKPJqm8pl8A74BFvmIfv2q/view?usp=drive_link)  \n'
          )
