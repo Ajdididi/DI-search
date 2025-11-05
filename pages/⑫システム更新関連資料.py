@@ -59,6 +59,7 @@ st.write('・[新電子ｶﾙﾃでの指示簿指示・実施の運用](https:/
          + '・[ｲﾝｽﾘﾝの指示画面（医師の操作）](https://drive.google.com/file/d/1Llz8elHsDGFYo2P31-p4js-MUxA-MEUk/view?usp=drive_link)  \n'
          + '・[ｲﾝｽﾘﾝの実施画面（看護師の操作）](https://drive.google.com/file/d/1ZvPBU51lFBe-VYmoWxc9qN1WPokdHQU6/view?usp=drive_link)  \n'
          + '・[更新後の病棟業務日誌・薬剤管理指導担当患者一覧](https://drive.google.com/file/d/1zxQq81Qa-yI2EUY0qk5aZ5Dtl9JI4E4Q/view?usp=drive_link)  \n'
+         + '・[注射麻薬の実施に関する周知](https://drive.google.com/file/d/18HjjkqEA3I3m5j1qjpGE06h12VpwA1xy/view?usp=drive_link)  \n'
          + ''
          )
 st.subheader('DI')
