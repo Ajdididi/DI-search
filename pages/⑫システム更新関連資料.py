@@ -6,7 +6,7 @@ st.write('★部署ごとにシステム更新関連の資料をまとめてい�
 st.write('---')
 st.subheader('課題・共有が必要な案件')
 st.write('')
-st.write('▸[管理表](https://docs.google.com/spreadsheets/d/1vJEZKh5XMy3nx8e-mm2NeshnA0hRLKJ3/edit?usp=drive_link&ouid=108857823619003694357&rtpof=true&sd=true) ←気付いたことをご記入ください')
+st.write('▸[管理表](https://docs.google.com/spreadsheets/d/1vJEZKh5XMy3nx8e-mm2NeshnA0hRLKJ3/edit?usp=drive_link&ouid=108857823619003694357&rtpof=true&sd=true)&nbsp;←気付いたことをご記入ください')
 st.write('---')
 st.subheader('10/31～11/4の運用')
 st.write('・[ｼｽﾃﾑ更新直前ｽｹｼﾞｭｰﾙと説明会開催について](https://drive.google.com/file/d/1UgT3FbXVo3uoC-XwGo_lpPE-s7ydsROZ/view?usp=drive_link)  \n'
@@ -34,9 +34,10 @@ st.write('・[ｼｽﾃﾑ更新に伴う調剤室関連の主な変更点](http
          + '・[処方の修正・削除時の対応について](https://drive.google.com/file/d/1yA_YdjWq6Sji2F0tiazS9_JU0rwrEL2a/view?usp=drive_link)  \n'
          + '・[部門ｼｽﾃﾑの設定について](https://drive.google.com/file/d/17w_q9pTvkpgPFMU0JdjR0XfKmnNghSke/view?usp=drive_link)  \n'
          + '・[搬送管理ｼｽﾃﾑの導入について](https://drive.google.com/file/d/1wsnfg8RCNipXMnZ9EnbmfIfnLHtNdMv9/view?usp=drive_link)  \n'
-         + '・[麻薬管理支援ｼｽﾃﾑの更新・電子ｶﾙﾃ更新後の手術麻薬払い出しについて](https://drive.google.com/file/d/1DTN5TQWpAGhrispc7peaLMlreePxALCc/view?usp=drive_link)  \n'
-         + '・[案内表示ﾓﾆﾀｰを用いた患者周知について](https://drive.google.com/file/d/1yt430xngK-HrnAdX53ww5abg3iWmquXk/view?usp=drive_link)  \n'
          + ''
+         + '・[案内表示ﾓﾆﾀｰを用いた患者周知について](https://drive.google.com/file/d/1yt430xngK-HrnAdX53ww5abg3iWmquXk/view?usp=drive_link)  \n'
+         + '・[麻薬管理支援ｼｽﾃﾑの更新・電子ｶﾙﾃ更新後の手術麻薬払い出しについて](https://drive.google.com/file/d/1DTN5TQWpAGhrispc7peaLMlreePxALCc/view?usp=drive_link)  \n'
+         + '・[麻薬管理支援ｼｽﾃﾑの操作](https://drive.google.com/file/d/1qKs8Wlk2czl6nTtOSgdx8aiKrggiufAF/view?usp=drive_link)20251107版  \n'
          )
 st.subheader('注射')
 st.write('・[新電子ｶﾙﾃでの注射運用について](https://drive.google.com/file/d/1-p8lR-1Af7_SDn4GYjvDiSXJuwn-c_ue/view?usp=drive_link)  \n'
@@ -50,7 +51,8 @@ st.subheader('化療')
 st.write('・[ﾚｼﾞﾒﾝﾂｰﾙの仕様と新電子ｶﾙﾃへのﾚｼﾞﾒﾝ登録内容について](https://drive.google.com/file/d/1B-WFGOEyrwX2T-2wnGQN6kNeTFh9JfOY/view?usp=drive_link)  \n'
          + '・[化療早出業務の運用変更点](https://drive.google.com/file/d/1f9SS5k9-Vil8nReDyE8forB2JhvssSR1/view?usp=drive_link)  \n'
          + '・[指示出し業務の運用変更点](https://drive.google.com/file/d/16y-5IYYwfh79J--7sTnpvJfrM7oknYPi/view?usp=drive_link)  \n'
-         + ''
+         + '・[AddDis調製モニタ 看護部説明資料](https://drive.google.com/file/d/1P4rDhlKsJWjsY7gZgT_CkfDUT3B8qC8w/view?usp=drive_link)&nbsp;←p3,4が修正されています  \n'
+         + '・参考（修正前）[AddDis調製モニタ 看護部説明資料](https://drive.google.com/file/d/1GvHrRg30_-yP12Ajs8RnDPdx8nx1qphi/view?usp=drive_link)  \n'
          )
 st.subheader('病棟')
 st.write('・[新電子ｶﾙﾃでの指示簿指示・実施の運用](https://drive.google.com/file/d/17AZVXODs1dh9uHm4Vc9zR3btY5XLk8h-/view?usp=drive_link)  \n'
