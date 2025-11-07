@@ -6,7 +6,7 @@ st.write('★部署ごとにシステム更新関連の資料をまとめてい�
 st.write('---')
 st.subheader('課題・共有が必要な案件')
 st.write('')
-st.write('▸[管理表](https://docs.google.com/spreadsheets/d/1vJEZKh5XMy3nx8e-mm2NeshnA0hRLKJ3/edit?usp=drive_link&ouid=108857823619003694357&rtpof=true&sd=true)&nbsp;←気付いたことをご記入ください')
+st.write('▸[管理表](https://docs.google.com/spreadsheets/d/1vJEZKh5XMy3nx8e-mm2NeshnA0hRLKJ3/edit?usp=drive_link&ouid=108857823619003694357&rtpof=true&sd=true)&nbsp;&nbsp;&nbsp;←気付いたことをご記入ください')
 st.write('---')
 st.subheader('10/31～11/4の運用')
 st.write('・[ｼｽﾃﾑ更新直前ｽｹｼﾞｭｰﾙと説明会開催について](https://drive.google.com/file/d/1UgT3FbXVo3uoC-XwGo_lpPE-s7ydsROZ/view?usp=drive_link)  \n'
@@ -51,8 +51,8 @@ st.subheader('化療')
 st.write('・[ﾚｼﾞﾒﾝﾂｰﾙの仕様と新電子ｶﾙﾃへのﾚｼﾞﾒﾝ登録内容について](https://drive.google.com/file/d/1B-WFGOEyrwX2T-2wnGQN6kNeTFh9JfOY/view?usp=drive_link)  \n'
          + '・[化療早出業務の運用変更点](https://drive.google.com/file/d/1f9SS5k9-Vil8nReDyE8forB2JhvssSR1/view?usp=drive_link)  \n'
          + '・[指示出し業務の運用変更点](https://drive.google.com/file/d/16y-5IYYwfh79J--7sTnpvJfrM7oknYPi/view?usp=drive_link)  \n'
-         + '・[AddDis調製モニタ 看護部説明資料](https://drive.google.com/file/d/1P4rDhlKsJWjsY7gZgT_CkfDUT3B8qC8w/view?usp=drive_link)&nbsp;←p3,4が修正されています  \n'
-         + '・参考（修正前）[AddDis調製モニタ 看護部説明資料](https://drive.google.com/file/d/1GvHrRg30_-yP12Ajs8RnDPdx8nx1qphi/view?usp=drive_link)  \n'
+         + '・[AddDis調製モニタ 看護部説明資料](https://drive.google.com/file/d/1P4rDhlKsJWjsY7gZgT_CkfDUT3B8qC8w/view?usp=drive_link)&nbsp;&nbsp;&nbsp;←p3,4が修正されています  \n'
+         + '&nbsp;&nbsp;&nbsp;参考（修正前）[AddDis調製モニタ 看護部説明資料](https://drive.google.com/file/d/1GvHrRg30_-yP12Ajs8RnDPdx8nx1qphi/view?usp=drive_link)  \n'
          )
 st.subheader('病棟')
 st.write('・[新電子ｶﾙﾃでの指示簿指示・実施の運用](https://drive.google.com/file/d/17AZVXODs1dh9uHm4Vc9zR3btY5XLk8h-/view?usp=drive_link)  \n'
@@ -65,6 +65,6 @@ st.write('・[新電子ｶﾙﾃでの指示簿指示・実施の運用](https:/
          + ''
          )
 st.subheader('DI')
-st.write('・PFM関連[11/4以降のPFM面談について](https://drive.google.com/file/d/1GhUfAEWHnBaMuSs_lxLs0yLLTL9q8w5e/view?usp=drive_link)  \n'
-         + '・PFM関連[PFMﾀﾌﾞﾚｯﾄ関連](https://drive.google.com/file/d/1Ni9mCIB_pJTKPJqm8pl8A74BFvmIfv2q/view?usp=drive_link)  \n'
+st.write('・PFM関連&nbsp;&nbsp;&nbsp;[11/4以降のPFM面談について](https://drive.google.com/file/d/1GhUfAEWHnBaMuSs_lxLs0yLLTL9q8w5e/view?usp=drive_link)  \n'
+         + '・PFM関連&nbsp;&nbsp;&nbsp;[PFMﾀﾌﾞﾚｯﾄ関連](https://drive.google.com/file/d/1Ni9mCIB_pJTKPJqm8pl8A74BFvmIfv2q/view?usp=drive_link)  \n'
          )
