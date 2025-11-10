@@ -64,6 +64,10 @@ st.write('・[新電子ｶﾙﾃでの指示簿指示・実施の運用](https:/
          + '・[注射麻薬の実施に関する周知](https://drive.google.com/file/d/18HjjkqEA3I3m5j1qjpGE06h12VpwA1xy/view?usp=drive_link)  \n'
          + ''
          )
+st.subheader('感染')
+st.write('・[指定抗菌薬使用報告書の運用変更について](https://drive.google.com/file/d/1ktHYF-u5sL6mBgNN13zWa9zd_gmDm3hM/view?usp=drive_link)  \n'
+         + '・[感染管理支援システム（BACTWeb）について](https://drive.google.com/file/d/13Vsl-Iqni0u1yIN120Lok4tw6GRNJQTm/view?usp=drive_link)  \n'
+         )
 st.subheader('DI')
 st.write('・PFM関連&nbsp;&nbsp;&nbsp;[11/4以降のPFM面談について](https://drive.google.com/file/d/1GhUfAEWHnBaMuSs_lxLs0yLLTL9q8w5e/view?usp=drive_link)  \n'
          + '・PFM関連&nbsp;&nbsp;&nbsp;[PFMﾀﾌﾞﾚｯﾄ関連](https://drive.google.com/file/d/1Ni9mCIB_pJTKPJqm8pl8A74BFvmIfv2q/view?usp=drive_link)  \n'
