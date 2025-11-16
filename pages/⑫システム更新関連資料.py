@@ -26,6 +26,7 @@ st.write('・[電子ｶﾙﾃ更新時に関する供給室からのお知らせ
          + '・[ｼｽﾃﾑ更新に伴う電話帳の運用について](https://drive.google.com/file/d/1gfCLnImukJCp_1KnOYEYX_fzysVSD6tL/view?usp=drive_link)  \n'
          + '・[ｱﾚﾙｷﾞｰに関連する周知事項](https://drive.google.com/file/d/1k4rqAUey6Wr72ijLCx4RD6G5Xih9C7Cm/view?usp=drive_link)  \n'
          + '・[患者ﾌﾟﾛﾌｧｲﾙのｱﾚﾙｷﾞｰ・注意事項について](https://drive.google.com/file/d/1fyoymVkBjdkA4yE7HfowGEEyCO42Tmnv/view?usp=drive_link)  \n'
+         + '・[案内表示ﾓﾆﾀｰを用いた患者周知について](https://drive.google.com/file/d/1yt430xngK-HrnAdX53ww5abg3iWmquXk/view?usp=drive_link)  \n'
          + ''
          )
 st.subheader('調剤')
@@ -34,10 +35,9 @@ st.write('・[ｼｽﾃﾑ更新に伴う調剤室関連の主な変更点](http
          + '・[処方の修正・削除時の対応について](https://drive.google.com/file/d/1yA_YdjWq6Sji2F0tiazS9_JU0rwrEL2a/view?usp=drive_link)  \n'
          + '・[部門ｼｽﾃﾑの設定について](https://drive.google.com/file/d/17w_q9pTvkpgPFMU0JdjR0XfKmnNghSke/view?usp=drive_link)  \n'
          + '・[搬送管理ｼｽﾃﾑの導入について](https://drive.google.com/file/d/1wsnfg8RCNipXMnZ9EnbmfIfnLHtNdMv9/view?usp=drive_link)  \n'
-         + ''
-         + '・[案内表示ﾓﾆﾀｰを用いた患者周知について](https://drive.google.com/file/d/1yt430xngK-HrnAdX53ww5abg3iWmquXk/view?usp=drive_link)  \n'
          + '・[麻薬管理支援ｼｽﾃﾑの更新・電子ｶﾙﾃ更新後の手術麻薬払い出しについて](https://drive.google.com/file/d/1DTN5TQWpAGhrispc7peaLMlreePxALCc/view?usp=drive_link)  \n'
-         + '・[麻薬管理支援ｼｽﾃﾑの操作](https://drive.google.com/file/d/1qKs8Wlk2czl6nTtOSgdx8aiKrggiufAF/view?usp=drive_link)20251107版  \n'
+         + '・[麻薬管理支援ｼｽﾃﾑの操作v1.2](https://drive.google.com/file/d/1wKLs2R2acsHHlX2Br0qRaYWMLhNoAzxM/view?usp=drive_link)  \n'
+         + '&nbsp;&nbsp;&nbsp;参考（修正前）[麻薬管理支援ｼｽﾃﾑの操作_20251107版](https://drive.google.com/file/d/1qKs8Wlk2czl6nTtOSgdx8aiKrggiufAF/view?usp=drive_link)  \n'
          )
 st.subheader('注射')
 st.write('・[新電子ｶﾙﾃでの注射運用について](https://drive.google.com/file/d/1-p8lR-1Af7_SDn4GYjvDiSXJuwn-c_ue/view?usp=drive_link)  \n'
