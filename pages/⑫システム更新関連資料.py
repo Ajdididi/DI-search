@@ -36,8 +36,9 @@ st.write('・[ｼｽﾃﾑ更新に伴う調剤室関連の主な変更点](http
          + '・[部門ｼｽﾃﾑの設定について](https://drive.google.com/file/d/17w_q9pTvkpgPFMU0JdjR0XfKmnNghSke/view?usp=drive_link)  \n'
          + '・[搬送管理ｼｽﾃﾑの導入について](https://drive.google.com/file/d/1wsnfg8RCNipXMnZ9EnbmfIfnLHtNdMv9/view?usp=drive_link)  \n'
          + '・[麻薬管理支援ｼｽﾃﾑの更新・電子ｶﾙﾃ更新後の手術麻薬払い出しについて](https://drive.google.com/file/d/1DTN5TQWpAGhrispc7peaLMlreePxALCc/view?usp=drive_link)  \n'
-         + '・[麻薬管理支援ｼｽﾃﾑの操作v1.2](https://drive.google.com/file/d/1wKLs2R2acsHHlX2Br0qRaYWMLhNoAzxM/view?usp=drive_link)  \n'
-         + '&nbsp;&nbsp;&nbsp;参考（修正前）[麻薬管理支援ｼｽﾃﾑの操作_20251107版](https://drive.google.com/file/d/1qKs8Wlk2czl6nTtOSgdx8aiKrggiufAF/view?usp=drive_link)  \n'
+         + '・[麻薬管理支援ｼｽﾃﾑの操作v1.3](https://drive.google.com/file/d/1cP2TVgotg7BsxgPNMFz6lfvlNSVg19DY/view?usp=drive_link)  \n'
+         + '&nbsp;&nbsp;&nbsp;参考（修正前）[麻薬管理支援ｼｽﾃﾑの操作v1.2](https://drive.google.com/file/d/1wKLs2R2acsHHlX2Br0qRaYWMLhNoAzxM/view?usp=drive_link)  \n'
+         + '&nbsp;&nbsp;&nbsp;参考（修正前）[麻薬管理支援ｼｽﾃﾑの操作_初版](https://drive.google.com/file/d/1qKs8Wlk2czl6nTtOSgdx8aiKrggiufAF/view?usp=drive_link)  \n'
          )
 st.subheader('注射')
 st.write('・[新電子ｶﾙﾃでの注射運用について](https://drive.google.com/file/d/1-p8lR-1Af7_SDn4GYjvDiSXJuwn-c_ue/view?usp=drive_link)  \n'
