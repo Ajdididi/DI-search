@@ -4,7 +4,7 @@ db = sqlite3.connect('druginfo.db')
 cur = db.cursor()
 st.title('医薬品設定情報')
 st.write('■最大量はEX時の部門システム設定値（任意）です。  \n'
-         + '&nbsp;&nbsp;&nbsp;&nbsp;HX変更後はMDBを使用しているので、設定が異なる場合があります。')
+         + '&nbsp;&nbsp;&nbsp;HX変更後はMDBを使用しているので、現在の設定と異なる場合があります。')
 kensaku = st.text_input('医薬品名（商品名もしくは一般名）を入力してください。※半角・全角は区別されます')
 btn = st.button('検索')
 if btn:
