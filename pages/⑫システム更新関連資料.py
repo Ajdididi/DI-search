@@ -67,6 +67,7 @@ st.write('・[新電子ｶﾙﾃでの指示簿指示・実施の運用](https:/
 st.subheader('感染')
 st.write('・[指定抗菌薬使用報告書の運用変更について](https://drive.google.com/file/d/1ktHYF-u5sL6mBgNN13zWa9zd_gmDm3hM/view?usp=drive_link)  \n'
          + '・[感染管理支援システム（BACTWeb）について](https://drive.google.com/file/d/13Vsl-Iqni0u1yIN120Lok4tw6GRNJQTm/view?usp=drive_link)  \n'
+         + '・[微生物検査結果の参照方法](https://drive.google.com/file/d/1sVM3tLYBjyS7vRoXG4wVTLpSY7iGHX1a/view?usp=drive_link)  \n'
          )
 st.subheader('DI')
 st.write('・PFM関連&nbsp;&nbsp;&nbsp;[11/4以降のPFM面談について](https://drive.google.com/file/d/1GhUfAEWHnBaMuSs_lxLs0yLLTL9q8w5e/view?usp=drive_link)  \n'
