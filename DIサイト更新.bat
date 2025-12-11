@@ -1,4 +1,4 @@
-cd C:\Users\AKIE01-2022\Python_script\DIサイト
+cd C:\Users\AKIE01-2025\Documents\Python_script\DIサイト
 git add .
 git commit -m "db_update"
 git push origin master
