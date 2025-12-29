@@ -50,12 +50,13 @@ def yomiuri():
     soup = BeautifulSoup(res.text, "html.parser")
 
     yomiuri = []
-    articles = soup.find_all(class_='p-list-item__inner')
-    for i in range(len(articles)):
-      article = articles[i].find('a')
-      text = article.text
-      href = article.attrs['href']
-      yomiuri.append(f'・[{text}]({url+href})')
+    for item in soup.select("div.item"):
+        a_tag = item.select_one("h3.title a")
+        if a_tag is None:
+            continue
+        title = a_tag.get_text(strip=True)
+        link = a_tag["href"]
+        yomiuri.append(f'・[{title}]({url + link})')
     yomiuri = set(yomiuri)  #リストの重複を削除
     return yomiuri
 
