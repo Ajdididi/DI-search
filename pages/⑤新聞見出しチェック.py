@@ -61,7 +61,7 @@ def yomiuri():
     return yomiuri
 
 def asahi():
-    url = 'https://www.asahi.com/apital/medicalnews/?iref=pc_apital_top'
+    url = 'https://www.asahi.com/apital/list/?iref=pc_apital_top'
     res = requests.get(url)
     res.encoding = res.apparent_encoding
     soup = BeautifulSoup(res.text, "html.parser")
