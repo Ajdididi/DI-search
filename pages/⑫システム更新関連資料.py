@@ -64,6 +64,8 @@ st.write('・[新電子ｶﾙﾃでの指示簿指示・実施の運用](https:/
          + '・[更新後の病棟業務日誌・薬剤管理指導担当患者一覧](https://drive.google.com/file/d/1zxQq81Qa-yI2EUY0qk5aZ5Dtl9JI4E4Q/view?usp=drive_link)  \n'
          + '・[注射麻薬の実施に関する周知](https://drive.google.com/file/d/18HjjkqEA3I3m5j1qjpGE06h12VpwA1xy/view?usp=drive_link)  \n'
          + '・[カルテからの薬情印刷方法](https://drive.google.com/file/d/1RXrU43TiQQbtKQTCNA8syu-8nWN0q3Gk/view?usp=drive_link)&nbsp;&nbsp;&nbsp;※一時的な対応です  \n'
+         + '・[新生児センター高濃度カリウム注射製剤払い出し手順](https://drive.google.com/file/d/1AW2QjX65F-r0Vwjvk1eUThJRgwyeMXKU/view?usp=drive_link)  \n'
+         + '&nbsp;&nbsp;&nbsp;→[別紙（詳細・トラブル時の対応）](https://drive.google.com/file/d/15l7-6kfjZ5kDqQPQ4h4EX1DNCWIsOc9r/view?usp=drive_link)  \n'
          )
 st.subheader('感染')
 st.write('・[指定抗菌薬使用報告書の運用変更について](https://drive.google.com/file/d/1ktHYF-u5sL6mBgNN13zWa9zd_gmDm3hM/view?usp=drive_link)  \n'
