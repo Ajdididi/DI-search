@@ -40,7 +40,7 @@ st.write('✓日本化学療法学会  \n'
         + '・[JAID/JSC感染症治療ガイド2023（Googleドライブ）](https://drive.google.com/file/d/184Z6x4T2MZguKhGvY34qaSp2khU6mGBQ/view?usp=drive_link)'
         )
 st.write('✓日本腎臓病薬物療法学会  \n'
-        + '・[腎機能低下時に最も注意が必要な薬剤投与量一覧](https://www.jsnp.org/ckd/yakuzaitoyoryo.php)  \n'
+        + '・[腎機能低下時に最も注意が必要な薬剤投与量一覧](https://www.jsnp.org/files/dosage_recommendations_39.pdf)  \n'
         + '・[eGFR・CCrの計算](https://www.jsnp.org/egfr/)'
         )
 st.write('✓[白鷺病院　透析患者に対する投薬ガイドライン](http://www.shirasagi-hp.or.jp/goda/fmly/gate.html)')
