@@ -3,8 +3,6 @@ import sqlite3
 db = sqlite3.connect('druginfo.db')
 cur = db.cursor()
 st.title('医薬品設定情報')
-st.write('■最大量はEX時の部門システム設定値（任意）です。  \n'
-         + '&nbsp;&nbsp;&nbsp;HX変更後はMDBを使用しているので、現在の設定と異なる場合があります。')
 kensaku = st.text_input('医薬品名（商品名もしくは一般名）を入力してください。※半角・全角は区別されます')
 btn = st.button('検索')
 if btn:
@@ -25,125 +23,84 @@ if btn:
             st.write(f'該当データ数：{len(kekka)} 件')
             st.write('----------------------')
 
-            for i in range(0, len(kekka)):
+            for i in range(len(kekka)):
+                # 採用の有無
                 if kekka[i][1] == 1:
                     saiyo = '採用あり'
                 elif kekka[i][1] == 2:
                     saiyo = '院内製剤'
                 elif kekka[i][1] == 3:
-                    saiyo = '緊急購入・患者限定'
+                    saiyo = '緊急購入'
                 else:
                     saiyo = '採用なし'
                 
-                if not kekka[i][11] is None:
-                    youji = '要時購入'
+                # 採用形式
+                if not kekka[i][7] is None:
+                        youji = '要時'
                 else:
-                    youji = '通常採用'
-                
-                if not kekka[i][12] is None:
-                    if not kekka[i][13] is None:
-                        if not kekka[i][14] is None:
-                            limit = f'{kekka[i][12]}・{kekka[i][13]}・{kekka[i][14]}'
-                        else:
-                            limit = f'{kekka[i][12]}・{kekka[i][13]}'
-                    else:
-                        limit = f'{kekka[i][12]}'
-                else:
-                    limit = 'なし'
-                
-                if not kekka[i][9] is None:
-                    store = '冷'
-                else:
-                    store = '室温'
-                
-                if not kekka[i][6] is None:
-                    class_ = kekka[i][6]
-                else:
-                    class_ = '―'
+                    youji = ''
 
-                st.write(f'{kekka[i][0]}  ＜{saiyo}＞' )
-                st.write('----基本情報----  \n'
-                        + f'[一般名]：{kekka[i][4]}  \n'
-                        + f'[販売会社等]：{kekka[i][5]}  \n'
-                        + f'[薬効分類名]：{kekka[i][8]}  \n'
-                        + f'[薬価]：{kekka[i][7]} 円  \n'
-                        + f'[貯法]：{store}  \n'
-                        + f'[採用形式]：{youji}  \n'
-                        + f'[診療科限定]：{limit}  \n'                
+                # 科限定
+                if not kekka[i][8] is None:
+                    limit = f'制限：{kekka[i][8]}'
+                else:
+                    limit = ''
+                
+                # 貯法
+                if not kekka[i][6] is None:
+                        store = '冷'
+                else:
+                    store = ''
+                
+                # 区分
+                if not kekka[i][4] is None:
+                        category = kekka[i][4]
+                else:
+                    category = ''
+                
+                # 自動車運転
+                if not kekka[i][13] is None:
+                    car = kekka[i][13]
+                else:
+                    car = '該当しない'
+                
+                # 薬情
+                if not kekka[i][22] is None:
+                    yakko1 = kekka[i][22]
+                    side_effect = kekka[i][23]
+                else:
+                    yakko1 = '設定なし'
+
+                st.write(f'【{kekka[i][0]}】&nbsp;&nbsp;{store}&nbsp;&nbsp;{youji}&nbsp;&nbsp;{limit}&nbsp;&nbsp;{category}&nbsp;&nbsp;{saiyo}  \n'
+                    + f'■基本情報  \n'
+                    + f'[一般名]&nbsp;&nbsp;{kekka[i][2]}  \n'
+                    + f'[メーカー]&nbsp;&nbsp;{kekka[i][3]}  \n'
+                    + f'[薬価]&nbsp;&nbsp;{kekka[i][5]} 円  \n'
+                    + f'[YJcode]&nbsp;&nbsp;{kekka[i][12]}  \n'
+                    )
+                if not kekka[i][17] is None:   #粉砕設定が空欄かどうかで分岐
+                    st.write('■調剤設定  \n'
+                        + f'[一包化]&nbsp;&nbsp;{kekka[i][16]}  \n'
+                        + f'[粉砕]&nbsp;&nbsp;{kekka[i][17]}  \n'
+                        + f'[簡易懸濁]&nbsp;&nbsp;{kekka[i][18]}  \n'
+                        + f'[注意事項]&nbsp;&nbsp;{kekka[i][19]}  \n'
                         )
-                #調剤設定
-                if not kekka[i][42] is None:  #粉砕設定が空欄かどうかで分岐
-                    st.write('----調剤設定----  \n'
-                            + f'[一包化]：{kekka[i][41]}  \n'
-                            + f'[粉砕]：{kekka[i][42]}  \n' 
-                            + f'[簡易懸濁]：{kekka[i][43]}  \n' 
-                            + f'[注意事項]：{kekka[i][44]}  \n'
-                            )
+                st.write('■情報提供')
+                st.write(f'[運転等]&nbsp;&nbsp;{car}')
+                if not kekka[i][22] is None:
+                    st.write(f'[薬効]&nbsp;&nbsp;  \n'
+                             + f'{kekka[i][22]}  \n'
+                             + f'[注意・副作用]&nbsp;&nbsp;  \n'
+                             + f'{kekka[i][23]}')
                 else:
-                    st.write('----調剤設定----  \n'
-                            + '該当しない')
-                #最大量設定
-                if not kekka[i][16] is None:
-                    st.write('----最大量設定----  \n'
-                            + f'[1日最大量]：{kekka[i][16]} {kekka[i][15]}／[1回最大量]：{kekka[i][17]} {kekka[i][15]}  \n'
-                            + f'[1日小児量]：{kekka[i][18]} {kekka[i][15]}／[1回小児量]：{kekka[i][19]} {kekka[i][15]}  \n' 
-                            + f'[設定理由]：{kekka[i][20]}  \n'
-                            + f'[備考]：{kekka[i][21]}  \n'
+                    st.write('[薬情] 設定なし')
+                if not kekka[i][24] is None:
+                    st.write(f'[薬効（診療科限定）]&nbsp;&nbsp;  \n'
+                             + f'{kekka[i][24]}')
+                
+                if not kekka[i][20] is None:  #比重設定が空欄かどうかで分岐
+                    st.write('■AddDis  \n'
+                            + f'[比重]&nbsp;&nbsp;{kekka[i][20]}  \n'
+                            + f'[粉の重量]&nbsp;&nbsp;{kekka[i][21]}'
                             )
-                else:
-                    st.write('----最大量設定----  \n'
-                            + '該当しない')
-                #自動車運転等の注意喚起
-                if not kekka[i][27] is None:
-                    st.write('----自動車運転等の注意喚起----  \n'
-                            + f'[注意分類]：{kekka[i][27]}' 
-                            )
-                else:
-                    st.write('----自動車運転等の注意喚起----  \n'
-                            + '該当しない')
-                #投与日数制限
-                if not kekka[i][31] is None:
-                    st.write('----投与日数制限----  \n'
-                            + f'[電カル設定（日）]：{kekka[i][31]}  \n'
-                            + f'[部門設定（日）]：{kekka[i][32]}  \n'
-                            + f'[休薬チェック表]：{kekka[i][33]}  \n'
-                            + f'[設定理由]：{kekka[i][34]}  \n'
-                            )
-                elif not kekka[i][35] is None:
-                    st.write('----投与日数制限----  \n'
-                            + f'[電カル設定（日）]：{kekka[i][35]}  \n'
-                            + f'[部門設定（日）]：{kekka[i][36]}  \n'
-                            + f'[設定理由]：{kekka[i][37]}  \n'
-                            )
-                else:
-                    st.write('----投与日数制限----  \n'
-                            + '該当しない')
-                #冷所医薬品の室温での安定性
-                if not kekka[i][47] is None:
-                    st.write('----冷所医薬品の室温での安定性----  \n'
-                            + f'[曝光]：{kekka[i][47]}  \n'
-                            + f'[遮光]：{kekka[i][48]}  \n'
-                            )
-                elif not kekka[i][49] is None:
-                    st.write('----冷所医薬品の室温での安定性----  \n'
-                            + f'[曝光]：{kekka[i][49]}  \n'
-                            + f'[遮光]：{kekka[i][50]}  \n'
-                            )
-                else:
-                    st.write('----冷所医薬品の室温での安定性----  \n'
-                            + '該当しない')
-                #薬情
-                if not kekka[i][51] is None:
-                    st.write('----薬情----  \n'
-                            + f'[薬効]  \n'
-                            + f'{kekka[i][51]}  \n'
-                            + f'[注意・副作用]  \n'
-                            + f'{kekka[i][52]}  \n'
-                            )
-                    if not kekka[i][53] is None:
-                        st.write(f'[薬効（診療科限定）]  \n'
-                                + f'{kekka[i][53]}')
-                else:
-                    st.write('----薬情----  \n'
-                            + '設定なし')
-                st.write('----------------------')
+                st.write('------------------------------  \n')
