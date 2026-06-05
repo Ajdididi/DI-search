@@ -9,7 +9,8 @@ st.write('✓PMDA  \n'
          )
 st.write('✓[SAFE-DI](https://www.safe-di.jp/)（ユーザー名・パスワードが必要)')
 st.write('✓[Lexicomp](https://www.uptodate.com/drug-interactions/#di-druglist)（薬物間相互作用検索）')
-st.write('✓[代謝酵素およびトランスポーターを介する相互作用において留意すべき薬物のリスト-第2版-](https://drive.google.com/file/d/1XNDvSzF7f4VJcY9YG9jm0n3GmqKRe6VI/view?usp=drive_link)（日本医療薬学会）')
+st.write('✓[代謝酵素およびトランスポーターを介する相互作用において留意すべき薬物のリスト-第2版-](https://drive.google.com/file/d/1XNDvSzF7f4VJcY9YG9jm0n3GmqKRe6VI/view?usp=drive_link)  \n'
+         + '（日本医療薬学会）')
 st.write('✓[「健康食品」の安全性・有効性情報](https://hfnet.nibiohn.go.jp/)')
 st.write('---------------------------------')
 st.write('■ 中毒')
