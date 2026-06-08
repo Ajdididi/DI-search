@@ -85,6 +85,11 @@ if btn:
                         + f'[簡易懸濁]&nbsp;&nbsp;{kekka[i][18]}  \n'
                         + f'[注意事項]&nbsp;&nbsp;{kekka[i][19]}  \n'
                         )
+                if not kekka[i][15] is None:   #日数制限設定の理由があるかどうかで分岐
+                    st.write('■処方日数制限（法令上の制限は除く）  \n'
+                        + f'[上限]&nbsp;&nbsp;{kekka[i][14]} 日  \n'
+                        + f'[理由]&nbsp;&nbsp;{kekka[i][15]}  \n'
+                        )
                 st.write('■情報提供')
                 st.write(f'[運転等]&nbsp;&nbsp;{car}')
                 if not kekka[i][22] is None:
