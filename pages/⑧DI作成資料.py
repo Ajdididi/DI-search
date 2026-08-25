@@ -1,12 +1,18 @@
 import streamlit as st
 st.title('DI作成資料')
 st.write('---------------------------------')
-st.write('■[添付文書改訂情報（Googleドライブ）](https://drive.google.com/drive/folders/1oWfXn2U6ntgeZ7WuOP7wXIre2AwFg7ly?usp=sharing)')
+st.write('■添付文書改訂情報（Googleドライブ）  \n'
+         + '・[ADI未掲載](https://drive.google.com/drive/folders/1oWfXn2U6ntgeZ7WuOP7wXIre2AwFg7ly?usp=drive_link)  \n'
+         + '・[ADI掲載済](https://note.com/yorozuya_yukisan)')
 st.write('---------------------------------')
 st.write('■[包装変更情報（Googleドライブ）](https://drive.google.com/drive/folders/1IC6nnVKAjfh28nvKBS5NTUzg6f_XYdqo?usp=sharing)')
 st.write('---------------------------------')
-st.write('■[フォーミュラリ2023（Googleドライブ）](https://drive.google.com/drive/folders/1k8Nsp5Mo0DmlVAEqQiRaCQncAY3Uvv0w?usp=sharing)')
-st.write('■[フォーミュラリ2024（Googleドライブ）](https://drive.google.com/drive/folders/1CStVrOfktl6vzSLTTPIFxU20q6C6RWX6?usp=sharing)')
+st.write('■フォーミュラリ  \n'
+        + '・[2023年度版](https://drive.google.com/drive/folders/1k8Nsp5Mo0DmlVAEqQiRaCQncAY3Uvv0w?usp=drive_link)  \n'
+        + '・[2024年度版](https://drive.google.com/drive/folders/1CStVrOfktl6vzSLTTPIFxU20q6C6RWX6?usp=drive_link)  \n'
+        + '・[2025年度版](https://drive.google.com/drive/folders/19YasqXxBfGWcutRLF_fMtoJG22yMudvk?usp=drive_link)  \n'
+        + '・[2026年度版](https://drive.google.com/drive/folders/1jlAUFFofcuhhJfzemPiva9Mx3VcKsg4v?usp=drive_link)'
+         )
 st.write('---------------------------------')
 st.write('■相互作用エラー設定（Googleドライブ）  \n'
         + '・[ア行](https://drive.google.com/drive/folders/1C6RFutk30mCumC895SY0zRCqlWVST4QC?usp=sharing)  \n'
