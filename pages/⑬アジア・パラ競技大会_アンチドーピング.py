@@ -19,6 +19,8 @@ st.write("")
 st.write("")
 
 st.subheader("関連資料", divider="green")
+st.write("・[大会指定病院における選手等受診にかかる流れ](https://drive.google.com/file/d/1zN-yukGrZqHSrkzJPFl-5phT8b84LShh/view?usp=drive_link)  \n"
+        + "&nbsp;&nbsp;&nbsp;注）p12のフローには、愛知県薬剤師会への相談と書かれていますが、相談は必須ではありません。")
 st.write("・[アンチドーピングと医療-2026年版-](https://drive.google.com/file/d/1nKHKLymT5xRrEVoLbLmHjAKDJEAQaXCq/view?usp=drive_link)")
 st.write("・[禁止表国際基準についての解説](https://drive.google.com/file/d/1nfOKNg1uQsv_hPx2Flan2ikjuaIw7ep-/view?usp=drive_link)")
 st.write("・[2026禁止表国際基準](https://www.playtruejapan.org/topics/2025/000751.html)")
@@ -43,7 +45,7 @@ st.write("")
 st.write("")
 st.write("")
 
-st.subheader("（対応に困った場合）専門家によるサポート", divider="green")
+st.subheader("（対応に困った場合）愛知県薬剤師会への相談", divider="green")
 st.write("大会組織委員会から貸与されたiPhoneから専門家に相談（フォーム送信）することができます。  \n"
         + "[使用方法](https://drive.google.com/file/d/1rVwzlUQC2iQKCcHR_FY6KitgudcgMAkf/view?usp=drive_link)を確認してからご利用ください。  \n"
         + "  \n"
